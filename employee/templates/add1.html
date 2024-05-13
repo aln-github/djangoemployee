@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Add Book
+{% endblock %}
+
+{% block content %}
+ <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h1 class="text-center">Edit Employee Detail</h1>
+          </div>
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              <table class="table">
+                {{ form.as_table }}
+              </table>
+              <button class="btn btn-dark btn-block" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+  </center>
